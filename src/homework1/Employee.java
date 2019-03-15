@@ -63,8 +63,8 @@ public class Employee {
 
         Employee employee = (Employee) o;
 
-        return this.firstName.equals(employee.firstName)&&this.lastName.equals(employee.lastName)
-                &&(this.salary==employee.salary)&& (this.id ==employee.id);
+        return (this.id ==employee.id)&&this.firstName.equals(employee.firstName)&&this.lastName.equals(employee.lastName)
+                &&(this.salary==employee.salary);
     }
 
     @Override
