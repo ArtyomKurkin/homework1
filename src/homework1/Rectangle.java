@@ -45,4 +45,22 @@ public class Rectangle {
         double perimeter=2*(this.length+this.width);
         return perimeter;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rectangle)) { return false;}
+
+        Rectangle rectangle = (Rectangle) o;
+
+        return (this.width==rectangle.width)&&(this.length==this.length);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (int)this.length;
+        result = 31 * result + (int)this.width;
+        return result;
+    }
 }
